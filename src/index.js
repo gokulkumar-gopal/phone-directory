@@ -7,7 +7,7 @@ import './common/common.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <AddSubscriber />,
+    <App />,
   document.getElementById('root')
 );
 

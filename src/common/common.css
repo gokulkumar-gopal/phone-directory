@@ -17,3 +17,8 @@
     background: #7ab97a;
     color: #fff;
 }
+
+.delete-btn {
+    background: red;
+    color: #fff;    
+}
