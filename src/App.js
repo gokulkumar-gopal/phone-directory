@@ -9,19 +9,14 @@ class App extends Component {
     alert("Hi");
   }
 
+  constructor() {
+    super();
+    this.state = {
+      subscribersListToShow: []
+    }
+  }
+
   render() {
-    let subscribers = [
-      {
-        id: 1,
-        name: "Shilpa Bhat",
-        phone: "888888888"
-      },
-      {
-        id: 2,
-        name: "Srishti",
-        phone: "999999999"
-      }
-    ]
     return (
       <div>
         <Header />
@@ -33,11 +28,11 @@ class App extends Component {
             <span className="grid-item phone-heading">Phone</span>
           </div>
           {
-            subscribers.map(sub=> {
+            this.state.subscribersListToShow.map(sub=> {
               return <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
-                <button className="custom-btn add-btn" onClick={this.deleteHandler}>Delete</button>
+                <button className="custom-btn delete-btn" onClick={this.deleteHandler}>Delete</button>
                 </div>
             })
           }
