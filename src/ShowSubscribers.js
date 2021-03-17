@@ -17,6 +17,10 @@ class ShowSubscribers extends Component {
     }
   }
 
+  onDeletedClick = (subscriberId) => {
+    this.props.deleteSubscriberHandler(subscriberId);
+  }
+
   render() {
     return (
       <div className="component-container">
@@ -33,7 +37,7 @@ class ShowSubscribers extends Component {
               return <div key={sub.id} className="grid-container">
                 <span className="grid-item">{sub.name}</span>
                 <span className="grid-item">{sub.phone}</span>
-                <button className="custom-btn delete-btn" onClick={this.deleteHandler}>Delete</button>
+                <button className="custom-btn delete-btn" onClick={this.onDeletedClick.bind(this,sub.id)}>Delete</button>
                 </div>
             })
           }
