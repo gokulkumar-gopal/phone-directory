@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import AddSubscriber from './AddSubscriber';
+import PhoneDirectory from './PhoneDirectory';
 import './common/common.css';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-    <App />,
+  <PhoneDirectory />,
   document.getElementById('root')
 );
 
